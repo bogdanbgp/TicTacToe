@@ -54,8 +54,8 @@ public class TicTacToe implements ActionListener {
 
         // -----------------------------------------------------------
         // Adding Panels to Frame
-        tttTitlePanel.add(tttTextField); // Add title to the title panel
-        tttFrame.add(tttTitlePanel, BorderLayout.NORTH); // Add title panel to top of frame
+        tttTitlePanel.add(tttTextField); // Add title text field ----> to the title panel
+        tttFrame.add(tttTitlePanel, BorderLayout.NORTH); // Add title panel to frame (top)
         tttFrame.add(tttButtonPanel); // Add button panel to the frame
         tttFrame.setVisible(true); // Show the frame
         // -----------------------------------------------------------
@@ -115,7 +115,7 @@ public void firstTurn() {
                 {0, 4, 8}, {2, 4, 6} // Diagonals
         };
 
-        // Check for a win for both players
+        //       check for a win for both players
         for (int[] condition : winConditions) {
             if (tttButtons[condition[0]].getText().equals("X") &&
                     tttButtons[condition[1]].getText().equals("X") &&
